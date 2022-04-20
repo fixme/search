@@ -1,0 +1,40 @@
+!!!5
+%html
+  %head
+    %title GitHub repositories
+    %link{ rel: "stylesheet", href: "css/spectre.min.css" }
+    %link{ rel: "stylesheet", href: "css/spectre-exp.min.css" }
+    %link{ rel: "stylesheet", href: "css/spectre-icons.min.css" }
+  %body
+    .container
+      .columns
+        .column.col-6.col-mx-auto
+          %h2 Search repositories:
+          %form{ action: "/repositories" }
+            .form-group
+              %label.form-label Search
+              %input.form-input{ type: "text", name: "query", placeholder: "Keywords", value: params[:query] }
+            .form-group
+              %label.form-label Sorting
+              %select.form-select{ name: "sort", placeholder: "Sorting" }
+                %option name
+                %option description
+            .form-group
+              %label.form-label Order
+              %label.form-radio
+                %input{ type: "radio", name: "order", value: "desc", checked: params[:order] == "desc" }
+                %i.form-icon
+                DESC
+              %label.form-radio
+                %input{ type: "radio", name: "order", value: "asc", checked: params[:order] == "asc" }
+                %i.form-icon
+                ASC
+            .form-group
+              %label.form-label Per page
+              %input.form-input{ type: "text", name: "per_page", value: params[:per_page] || 10 }
+            .form-group
+              %input.btn.input-group-btn{ type: "submit", text: "Search" }
+      .container
+        .columns
+          .column.col-6.col-mx-auto
+            =yield
