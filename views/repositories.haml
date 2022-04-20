@@ -1,0 +1,15 @@
+%label Found:
+%string= total
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Link
+  %tbody
+    - collection.each do |item|
+      %tr.activ
+        %td= item.full_name
+        %td= item.description
+        %td
+          %a{ href: item.html_url } Visit
