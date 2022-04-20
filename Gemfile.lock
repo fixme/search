@@ -4,7 +4,6 @@ GEM
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
-    blueprinter (0.25.3)
     concurrent-ruby (1.1.10)
     crack (0.4.5)
       rexml
@@ -145,7 +144,6 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
-  blueprinter
   dry-validation
   haml
   octokit (~> 4.0)

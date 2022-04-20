@@ -2,7 +2,6 @@
 
 source 'https://rubygems.org'
 
-gem 'blueprinter'
 gem 'dry-validation'
 gem 'haml'
 gem 'octokit', '~> 4.0'
